@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>Integrador 02</title>
+  </head>
+  <body>
+    <header>
+      <img src="img/logo_1.png" class="logo" alt="logo" />
+      <nav class="navbar">
+        <div class="menu_container">
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+        </div>
+        <ul class="list-nav">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Carrito -->
+
+      <!-- <div class="cart" style="background-color: aliceblue;">
+        <div class="header-cart">
+          <h2>Tu carrito</h2>
+        </div>
+
+        <div class="cart-items">
+          <div class="cart-item">
+            <i class="fa-solid fa-cart-shopping" alt="carrito" ></i>
+            <div class="cart-items-detail">
+              <span class="cart-item-title">Caja</span>
+              <div class="selector-cant">
+                <i class="fa-solid fa-minus minus-cant"></i>
+                <input type="text" value="1" class="cart-item-cant" disabled>
+                <i class="fa-solid fa-plus plus-cant"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div>
+        <ul>
+          <li class="cart">
+            <i class="fa-solid fa-cart-shopping" alt="cart"></i>
+            <div id="cart">
+              <table id="list-cart">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <a href="#" id="vaciar-carrito" class="btn_2">Vaciar Carrito</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Fin carrito -->
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="hero_info">
+          <h1>LLEVÁ EL ROCK A TODOS LADOS! 🤘</h1>
+          <p>
+            <span>
+              Nuestras remeras son de diseño, de alta calidad y artesanales.
+              <br />
+              Impresas en serigrafia plastisol mate, compuestas por 100% algodón
+              premium.
+            </span>
+          </p>
+          <div class="btn_hero">
+            <a href="#" class="btn_1">VER MAS</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="about-us">
+          <h3>NUESTRAS REMERAS</h3>
+          <h2>¡SON ÚNICAS!</h2>
+          <p class="txt">
+            Nos encanta el Rock y nos encanta diseñar nuestros productos.
+            Transmitir la pasión por tantas leyendas de la música, con una
+            frase, con una canción, con un gran momento.
+            <br /><br />
+            Todas nuestras remeras son de 100% algodón premium impresas en la
+            mejor calidad de serigrafía.
+          </p>
+        </div>
+        <div class="about-img">
+          <img src="./img/pld_0211-P.png" alt="img-about" />
+        </div>
+      </section>
+
+      <section class="products">
+        <!-- Productos -->
+        <div class="prod_container"></div>
+        <div class="title-prod">
+          <h2>Remeras</h2>
+        </div>
+
+        <div class="prod-container">
+          <!-- <div class="product">
+            <img
+            src="./img/Productos/alice-in-chains.jpg"
+              alt="img-prod"
+              class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Alice In Chains</h3>
+              <p>AIC - Heart</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                  >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+              src="./img/Productos/genesis.jpg"
+              alt="img-prod"
+              class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Genesis</h3>
+              <p>Watcher Of The Skies</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                  >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+            src="./img/Productos/kiss.jpg"
+              alt="img-prod"
+              class="img-card"
+              />
+            <div class="product-txt">
+              <h3>Kiss</h3>
+              <p>Tour 1976</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                  >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+              src="./img/Productos/pink-floyd.jpg"
+              alt="img-prod"
+              class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Pink Floyd</h3>
+              <p>Welcome To The Machine</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                  >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+              src="./img/Productos/rush.jpg"
+              alt="img-prod"
+              class="img-card"
+              />
+            <div class="product-txt">
+              <h3>Rush</h3>
+              <p>Moving Pictures Tour 81</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+            src="./img/Productos/stone-temple-pilots.jpg"
+            alt="img-prod"
+            class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Stone Temple Pilots</h3>
+              <p>Flying Disc</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+              src="./img/Productos/the-beastie-boys.jpg"
+              alt="img-prod"
+              class="img-card"
+            />
+            <div class="product-txt">
+              <h3>The Beastie Boys</h3>
+              <p>Check Your Head Japanese</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+            src="./img/Productos/the-cars.jpg"
+            alt="img-prod"
+            class="img-card"
+            />
+            <div class="product-txt">
+              <h3>The Cars</h3>
+              <p>Good Times Roll</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+            src="./img/Productos/eric-clapton.jpg"
+            alt="img-prod"
+              class="img-card"
+              />
+              <div class="product-txt">
+                <h3>Eric Clapton</h3>
+                <p>Tour '79</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+            src="./img/Productos/motley-crue.jpg"
+            alt="img-prod"
+            class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Motley Crue</h3>
+              <p>US Tour 83</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+            src="./img/Productos/queen.jpg"
+            alt="img-prod"
+            class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Queen</h3>
+              <p>Day At The Races</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+              src="./img/Productos/rolling-stones.jpg"
+              alt="img-prod"
+              class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Rolling Stones</h3>
+              <p>Ringer US Tour '78</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+            src="./img/Productos/steve-miller-band.jpg"
+            alt="img-prod"
+            class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Steve Miller Band</h3>
+              <p>Greatest Hits Royal</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+            src="./img/Productos/the-police.jpg"
+            alt="img-prod"
+            class="img-card"
+            />
+            <div class="product-txt">
+              <h3>The Police</h3>
+              <p>Synchronicity</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product">
+            <img
+            src="./img/Productos/van-halen.jpg"
+            alt="img-prod"
+            class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Van Halen</h3>
+              <p>Classic Red Logo</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                  >Agregar al carrito</a
+                  >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+            src="./img/Productos/fleetwood-mac.jpg"
+            alt="img-prod"
+            class="img-card"
+            />
+            <div class="product-txt">
+              <h3>Fleetwood Mac</h3>
+              <p>Rumours Vintage</p>
+              <p class="precio">$12000</p>
+              <div class="btn-purchase">
+                <a href="#" class="add-cart_btn-2" data-id="2"
+                  >Agregar al carrito</a
+                >
+                <a href="#" class="add-cart_btn-3" data-id="3">Ver Detalles</a>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="block-purchase-info__container">
+            <div class="info-items">
+              <div class="block-purchase-info">
+                <p class="block-purchase-item-icon">
+                  <i class="fas fa-truck"></i>
+                </p>
+                <p class="block-purchase-title">ENVIOS A TODO EL PAIS</p>
+                <p class="block-purchase-subtitle">
+                  COMPRA SIN MOVERTE DE TU CASA
+                </p>
+              </div>
+
+              <div class="block-purchase-info">
+                <p class="block-purchase-item-icon">
+                  <i class="far fa-credit-card"></i>
+                </p>
+                <p class="block-purchase-title">HASTA 12 CUOTAS</p>
+                <p class="block-purchase-subtitle">
+                  TODAS LAS TARJETAS Y MEDIOS DE PAGO
+                </p>
+              </div>
+
+              <div class="block-purchase-info">
+                <p class="block-purchase-item-icon">
+                  <i class="fas fa-lock"></i>
+                </p>
+                <p class="block-purchase-title">COMPRA SEGURA</p>
+                <p class="block-purchase-subtitle">PROTEGEMOS TUS DATOS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="footer-line"></div>
+      <div class="footer-wrapper">
+        <div class="footer-top">
+          <div class="footer-headline">
+            <h2>Suscribite a nuestro Newsletter</h2>
+            <p>Recibi un 10% de descuento en tu primer compra.</p>
+          </div>
+
+          <form>
+            <div class="footer-suscribe">
+              <label for="Tu email"></label>
+              <input type="email" spellcheck="false" placeholder="Tu Email" />
+              <button>Suscribirse</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-links">
+            <ul>
+              <li>
+                <a href="#" title="Link-1">Inicio</a>
+              </li>
+              <li>
+                <a href="#" title="Link-1">Nosotros</a>
+              </li>
+              <li>
+                <a href="#" title="Link-1">Remeras</a>
+              </li>
+              <li>
+                <a href="#" title="Link-1">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="social-links">
+            <ul>
+              <li>
+                <p>SEGUINOS EN:</p>
+              </li>
+              <li>
+                <a href="#" title="Instagram"
+                  ><i class="fa-brands fa-instagram" alt="Instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" title="Facebook"
+                  ><i class="fa-brands fa-facebook" alt="Facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" title="Whatsapp"
+                  ><i class="fa-brands fa-whatsapp" alt="Whatsapp"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-logo">
+            <img src="./img/logo_2.png" class="logo-footer" alt="footer_logo" />
+          </div>
+          <small>Diseñado por <b>Jonathan Cóceres</b> - Nucba 2023</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="main.js"></script> -->
+    <script src="index.js"></script>
+    <script src="data.js"></script>
+  </body>
+</html>
